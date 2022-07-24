@@ -15,9 +15,9 @@ async function testCompany() {
     }
 
     for(let company of companies){
-        for(let i = 0; i < 100; i++){
+        for(let i = 0; i < 1000; i++){
             await models.sequelize.models.Todo.create({
-                content: faker.lorem.sentence,
+                content: faker.lorem.sentence(),
                 companyId: company.id
             })
         }
